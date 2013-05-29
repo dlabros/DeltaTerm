@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>
-
+/*This function receives as arguments the name, ID and parent ID of a
+directory and adds it to the directory tree.*/
 int  Write_to__Tree(int argc,char* argv[])
 {
 	int i;
