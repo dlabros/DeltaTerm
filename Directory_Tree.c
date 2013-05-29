@@ -49,13 +49,13 @@ int  Write_to__Tree(int argc,char* argv[])
 	{//Reading from file. The variable name remains unused here.
 		fscanf(fd," %s %d %d",&name,&control_did,&control_pdid);
 
-		if ((argv[1]==control_did)||(argv[i]==control_pdid))
+		if ((argv[1]==atoi(control_did))||(argv[i]==atoi(control_pdid)))
 		{//Checking if the  given ID or parent ID already exists.
 			printf("The ID you have given is already in use. Please choose another one.\n");
 			return 4;
 		}
 
-		if ((argv[2]==control_did)||(argv[2]==control_pdid))
+		if ((argv[2]==atoi(control_did))||(argv[2]==atoi(control_pdid)))
 		{
 			printf("The parent ID you have given is already in use. Please choose another one.\n");
 			return 4;
@@ -63,5 +63,6 @@ int  Write_to__Tree(int argc,char* argv[])
 	}
 	//Writing the given directory parameters to the specidied file.
 	fprintf(fd,"%s\t%s\t%s\n",argv[0],argv[1],argv[2]);
+	fclose(fd);
 }
 
