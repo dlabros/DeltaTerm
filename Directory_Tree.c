@@ -64,5 +64,6 @@ int  Write_to__Tree(int argc,char* argv[])
 	//Writing the given directory parameters to the specidied file.
 	fprintf(fd,"%s\t%s\t%s\n",argv[0],argv[1],argv[2]);
 	fclose(fd);
+	return 0;
 }
 
