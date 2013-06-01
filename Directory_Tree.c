@@ -4,10 +4,10 @@
 #include <string.h>
 /*This function receives as arguments the name, ID and parent ID of a
 directory and adds it to the directory tree.*/
-int  Write_to__Tree(int argc,char* argv[])
+int  Write_to__Tree(int argc,char argv[])
 {
 	int i;
-	char *control_name,*control_did[10],*control_pdid[10],*name[50];
+	char control_name,*control_did[10],control_pdid[10],name[50];
 	FILE *fd;
 
 	//Open the file for appending and reading.
@@ -41,7 +41,7 @@ int  Write_to__Tree(int argc,char* argv[])
 
 	if ((argv[2]>=10)||(argv[2]<0))
     {//Checking the validity of the parent directory ID.
-        printf("The directory ID you have given exceeds the limits of CentOS.\n");$
+        printf("The directory ID you have given exceeds the limits of CentOS.\n");
         printf("Valid  file descriptors  range from 0 to 1024.\n");
         return 3;
     }
@@ -67,4 +67,3 @@ int  Write_to__Tree(int argc,char* argv[])
 	fclose(fd);
 	return 0;
 }
-

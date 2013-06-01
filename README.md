@@ -1,4 +1,4 @@
 DeltaTerm
 =========
 
-A linux-based terminal simulator
+A linux-based terminal simulator.
